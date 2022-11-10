@@ -1,0 +1,35 @@
+pipeline:
+  name: trigger-demo
+  identifier: triggerdemo
+  projectIdentifier: DhrubaCI
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: dhrubaaccountconnector
+        repoName: cpp-sample-ci
+        build: <+input>
+  stages:
+    - stage:
+        name: stage 1
+        identifier: stage_1
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: trigger pull request
+                  identifier: trigger_pull_request
+                  spec:
+                    shell: Sh
+                    command: echo "successfull"
