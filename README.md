@@ -1,7 +1,7 @@
 # Sample C++ CI App
 
 
-### Set up the docker repository.
+### Set up the docker repository:
 
 ```
 sudo apt-get update
