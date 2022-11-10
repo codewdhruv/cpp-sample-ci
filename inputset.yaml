@@ -1,0 +1,14 @@
+inputSet:
+  identifier: "inputset"
+  name: "inputset"
+  orgIdentifier: "default"
+  projectIdentifier: "DhrubaCI"
+  pipeline:
+    identifier: "triggerdemo"
+    properties:
+      ci:
+        codebase:
+          build:
+            type: "PR"
+            spec:
+              number: "<+trigger.prNumber>"
