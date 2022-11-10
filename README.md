@@ -1,4 +1,4 @@
-# Sample C++ CI App
+# Sample C++ CI App Demo
 
 
 ### Set up the docker repository:
